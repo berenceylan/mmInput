@@ -7,14 +7,14 @@ A JQuery plugin to take multiple mails from the user.
 ```
 <div id="outer" class="mmOuter">
 	<div id="boxes" class="mmBoxes"></div>
-	<input id="mails" class="mmInput"/>
+	<input id="mails" class="multiMail"/>
 </div>
 ```
 
 + JS Initialization
 
 ```
-var input1 = $(".mmInput").multiMailInput();
+var input1 = $(".multiMail").multiMailInput();
 var mails = input1.getMails();
 ```
 
