@@ -18,7 +18,7 @@ var input1 = $(".mmInput").multiMailInput();
 var mails = input1.getMails();
 ```
 
-+ Tips
+### Tips
 
 * You can separate mails by "," or enter.
 * Mails are validated by regex.
