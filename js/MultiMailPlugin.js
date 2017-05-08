@@ -1,3 +1,12 @@
+/*
+###############################
+##          Author           ##
+##      Beren İlkim Ceylan   ##
+## bceylanues[at]gmail[d]com ##
+##      @berenceylan         ##
+###############################
+*/
+
 (function ($) {
     var result = [];
     var input;
