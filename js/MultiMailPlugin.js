@@ -1,7 +1,7 @@
 (function ($) {
     var result = [];
     $.fn.multiMailInput = function () {
-        this.filter(".mmInput").each(function () {
+        this.filter(".multiMail").each(function () {
             var input = $(this);
             input.css("position", "relative");
             input.css("margin-top", "20px");
