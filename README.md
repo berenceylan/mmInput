@@ -1,8 +1,7 @@
 # mmInput
 A JQuery plugin to take multiple mails from the user.
 
-#Example
-
+### Example Usage
 + HTML
 
 ```
@@ -18,3 +17,6 @@ A JQuery plugin to take multiple mails from the user.
 var input1 = $(".mmInput").multiMailInput();
 var mails = input1.getMails();
 ```
+
+### Result
+
