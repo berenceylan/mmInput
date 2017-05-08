@@ -64,3 +64,8 @@ input1.addMailCSV("mail1@mail.com,mail2@mail.org,mail3@mail.co,mail4@mail.co.uk"
 ## Result
 
 ![alt tag](http://image.prntscr.com/image/9a4d78e7d4e44c6cabff704c4524b542.png)
+
+## To Do
+
+* Language dependent sections will be parameterized
+* CSS dependent sections will also be parameterized
