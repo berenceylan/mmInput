@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+Beren İlkim Ceylan
+bceylanues@gmail.com
+
+Multiple e-mails separated by comma or enter
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script  src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="  crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/MultiMailPlugin.js"></script>
+        <title>Multiple Mail Plugin</title>
+    </head>
+    <body>
+        <div id="outer" class="mmOuter">
+            <div id="boxes" class="mmBoxes"></div>
+            <input id="mails" class="mmInput"/>
+        </div>
+    </body>
+</html>
+
+<script>
+var input1 = $(".mmInput").multiMailInput();
+
+var mails = input1.getMails();
+
+console.log(mails);
+</script>
