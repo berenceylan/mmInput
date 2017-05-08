@@ -8,8 +8,8 @@ A JQuery plugin to take multiple mails from the user.
 
 ```
 <div id="outer" class="mmOuter">
-<div id="boxes" class="mmBoxes"></div>
-<input id="mails" class="multiMail"/>
+	<div id="boxes" class="mmBoxes"></div>
+	<input id="mails" class="multiMail"/>
 </div>
 ```
 
