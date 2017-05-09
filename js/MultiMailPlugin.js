@@ -1,12 +1,3 @@
-/*
-###############################
-##          Author           ##
-##      Beren İlkim Ceylan   ##
-## bceylanues[at]gmail[d]com ##
-##      @berenceylan         ##
-###############################
-*/
-
 (function ($) {
     var result = [];
     var input;
@@ -16,7 +7,7 @@
             var condition = validateMail(mail, result)["condition"];
             var msg = validateMail(mail, result)["msg"];
             if(condition){
-                elem.siblings(".mmBoxes").append("<span class='mmBox' style='height: 17px; vertical-align: center; width: 300px;'>" + mail + " <img class='deleteBox' width=16 src='image/delete.png' style='cursor: pointer; float: right;'/></span>");
+                elem.siblings(".mmBoxes").append("<span class='mmBox' style='height: 35px; vertical-align: center;'>" + mail + " <img class='deleteBox' width=16 src='../js/MultiMail/image/delete.png' style='cursor: pointer; margin: 5px; float: right;'/></span>");
                 $.fn.multiMailInput.arrangeBoxCss(".mmBox");
                 result.push(mail);
                 input.val("");
@@ -43,8 +34,8 @@
         this.filter(".multiMail").each(function () {
             input = $(this);
             input.css("position", "relative");
-            input.css("margin-top", "10px");
-            input.css("margin-left", "10px");
+            input.css("margin-top", "20px");
+            input.css("margin-right", "5px");
             input.parent(".mmOuter").css("margin-top", "20px");
             input.attr("placeholder", "Comma separated emails");
             input.keydown(function (event) {
