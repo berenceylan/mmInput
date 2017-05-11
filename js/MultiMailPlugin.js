@@ -6,7 +6,6 @@
     $.fn.multiMailInput = function (options) {
         var $this = this;
         defaults = {
-            //To Be Completed Later
             imageDir: "",
             validation_error: "is not valid!",
             duplicate_error: "is already exist!",
@@ -28,10 +27,6 @@
                 defaults.placeholder = options.placeholder;
             }
         }
-        
-        
-        console.log(defaults);
-        console.log(options);
         
         $this.addMail = function (mail, elem) {
             var condition = validateMail(mail, result)["condition"];
