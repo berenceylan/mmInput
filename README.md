@@ -1,14 +1,15 @@
-# Update 1
+# MultiMailInput
+
+A JQuery plugin to take multiple mails from the user.
+
+![alt tag](http://image.prntscr.com/image/9a4d78e7d4e44c6cabff704c4524b542.png)
+
+## #Update 1
 
 * Settings can be manipulated via parameters.
 * Comma separated mails can be entered at once. 
 * A hidden input is added so that send the data in a form component.
 * Minor bug fix & CSS issues
-
-
-# MultiMailInput
-
-A JQuery plugin to take multiple mails from the user.
 
 ## Example Usage
 
@@ -81,10 +82,6 @@ input1.addMailCSV("mail1@mail.com,mail2@mail.org,mail3@mail.co,mail4@mail.co.uk"
 
 * If you see any mistake please do not hesitate to open an issue. 
 * Any merge request would be appreciated.
-
-## Result
-
-![alt tag](http://image.prntscr.com/image/9a4d78e7d4e44c6cabff704c4524b542.png)
 
 ## To Do
 
