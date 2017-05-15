@@ -8,18 +8,36 @@
 */
 
 (function ($) {
+	// Collects mails as an array
     var result = [];
+    // First input
     var input;
-    $.fn.multiMailInput = function () {
+    // Collect mails as CSV in a form invisibly.
+    var hiddeninput;
+    // Default settings
+    var defaults;
+
+    $.fn.multiMailInput = function (options) {
         var $this = this;
+
+        defaults = {
+        	// Images directory
+            imageDir: "image/",
+            // Error language settings
+            validation_error: "is not valid!",
+            duplicate_error: "is already exist!",
+            placeholder: "Press comma or tab to add e-mails"
+        };
+
         $this.addMail = function (mail, elem) {
             var condition = validateMail(mail, result)["condition"];
             var msg = validateMail(mail, result)["msg"];
             if(condition){
-                elem.siblings(".mmBoxes").append("<span class='mmBox' style='height: 17px; vertical-align: center; width: 300px;'>" + mail + " <img class='deleteBox' width=16 src='image/delete.png' style='cursor: pointer; float: right;'/></span>");
+                elem.siblings(".mmBoxes").append("<span class='mmBox' style='height: 17px; vertical-align: center; width: 300px;'>" + mail + " <img class='deleteBox' width=16 src='"+defaults.imageDir+"delete.png' style='cursor: pointer; float: right;'/></span>");
                 $.fn.multiMailInput.arrangeBoxCss(".mmBox");
                 result.push(mail);
                 input.val("");
+                hiddeninput.val($this.getMailsCSV());
                 $(".deleteBox").click(function () {
                     deleteMMBox(this);
                 });
@@ -39,20 +57,38 @@
                 $this.addMail(mailArray[i],elem);
             }
         },
-                
+        $this.getMailsCSV = function () {
+            var CSV = "";
+            for (var i in result) {
+                CSV += result[i];
+                //If it is not the last item add comma
+                if(i != result.length-1){
+                     CSV += ",";
+                }
+            }
+            return CSV;
+        },
+        // Constructor    
         this.filter(".multiMail").each(function () {
             input = $(this);
+            hiddeninput = input.siblings(".multiMailResult");
+            hiddeninput.css("display", "none");
             input.css("position", "relative");
             input.css("margin-top", "10px");
             input.css("margin-left", "10px");
             input.parent(".mmOuter").css("margin-top", "20px");
-            input.attr("placeholder", "Comma separated emails");
+            input.attr("placeholder", defaults.placeholder);
             input.keydown(function (event) {
-                if (event.keyCode === 188 || event.keyCode === 13) {
+            	//Comma or tab key
+                if (event.keyCode === 188 || event.keyCode === 9) {
                     event.preventDefault();
                     var raw = input.val();
-                    var mail = raw.split(",")[0];
-                    $this.addMail(mail, input);
+                    var mails = raw.split(",");
+                    
+                    for (var i in mails){
+                        if(typeof mails[i] !== "undefined")
+                            $this.addMail(mails[i], input);
+                    }
                 }
             });
         });
@@ -69,11 +105,11 @@
             },
             addMailCSV: function(mailString, delimeter){
                 $this.addMailsCsv(mailString, delimeter, input);
+            },
+            getMailsCSV: function(){
+                return $this.getMailsCSV();
             }
         };
-    };
-
-    var defaults = {
     };
 
     function validateMail(mail, array) {

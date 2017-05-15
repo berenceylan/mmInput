@@ -18,15 +18,15 @@ Multiple e-mails separated by comma or enter
     </head>
     <body>
         <div id="outer" class="mmOuter">
-            <div id="boxes" class="mmBoxes"></div>
-            <input id="mails" class="multiMail"/>
-        </div>
+				<input id="input" class="form-control multiMail"/>
+				<input id="mails" name="mails" class="multiMailResult"/>
+				<div id="boxes" class="mmBoxes"></div>
+		</div>
     </body>
 </html>
 
 <script>
 var input1 = $(".multiMail").multiMailInput();
-
 var mails = input1.getMails();
 
 console.log(mails);
