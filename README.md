@@ -72,6 +72,14 @@ input1.addMailArray(["mail1@mail.com", "mail2@mail.org", "mail3@mail.co", "mail4
 input1.addMailCSV("mail1@mail.com,mail2@mail.org,mail3@mail.co,mail4@mail.co.uk", ",");
 ```
 
+#### Get Mails as CSV
+
+```
+// Returns a CSV string
+
+input1.getMailsCSV();
+```
+
 ## Tips
 
 * You can separate mails by "," or tab button.
@@ -82,8 +90,3 @@ input1.addMailCSV("mail1@mail.com,mail2@mail.org,mail3@mail.co,mail4@mail.co.uk"
 
 * If you see any mistake please do not hesitate to open an issue. 
 * Any merge request would be appreciated.
-
-## To Do
-
-* Language dependent sections will be parameterized
-* CSS dependent sections will also be parameterized
