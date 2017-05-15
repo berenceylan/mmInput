@@ -28,6 +28,22 @@
             duplicate_error: "is already exist!",
             placeholder: "Press comma or tab to add e-mails"
         };
+		
+		//Initializing options
+        if(typeof options !== "undefined"){
+            if(typeof options.imageDir !== "undefined"){
+                defaults.imageDir = options.imageDir;
+            }
+            if(typeof options.validation_error !== "undefined"){
+                defaults.validation_error = options.validation_error;
+            }
+            if(typeof options.duplicate_error !== "undefined"){
+                defaults.duplicate_error = options.duplicate_error;
+            }
+            if(typeof options.placeholder !== "undefined"){
+                defaults.placeholder = options.placeholder;
+            }
+        }
 
         $this.addMail = function (mail, elem) {
             var condition = validateMail(mail, result)["condition"];
