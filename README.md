@@ -2,6 +2,9 @@
 
 A JQuery plugin to take multiple mails from the user.
 
+[Demo](http://www.berenceylan.com/multiMailInput)
+
+
 ![alt tag](http://image.prntscr.com/image/9a4d78e7d4e44c6cabff704c4524b542.png)
 
 ## #Update 1
